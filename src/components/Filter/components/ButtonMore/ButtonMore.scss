@@ -1,0 +1,21 @@
+@import "../../../../sass/index.scss";
+
+.btn-more-custom {
+	cursor: pointer;
+	border-radius: $border-radius;
+	padding: 6.4px 15px;
+	border: 1px solid $color-golden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	font-size: 1.8rem;
+	font-weight: bold;
+	background-color: #fff;
+	&:hover .icon {
+		font-size: 5rem;
+	}
+	.icon {
+		margin-right: 0.8rem;
+	}
+}

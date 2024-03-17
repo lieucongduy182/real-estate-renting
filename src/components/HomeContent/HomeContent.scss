@@ -1,0 +1,46 @@
+@import "../../sass/index.scss";
+
+.home-content-wrap {
+	width: 100%;
+	position: relative;
+	min-height: 100vh;
+}
+
+.homeContent__top {
+	width: 90%;
+	padding: 1rem;
+	margin: 2rem auto;
+	background-color: #181818;
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+	&--total {
+		background-color: #292929;
+		padding: 1rem;
+		border-radius: 10px;
+		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+			rgba(0, 0, 0, 0.23) 0px 6px 6px;
+		color: $color-golden;
+	}
+
+	&--btn {
+		background-color: #292929;
+		padding: 1rem;
+		border-radius: 10px;
+
+		color: $color-golden;
+		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+			rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+		& > button {
+			background-color: $color-golden;
+			border-radius: 5px;
+			border: none;
+
+			color: $color-black;
+			&:hover {
+				background-color: rgba($color: $color-golden, $alpha: 0.7);
+			}
+		}
+	}
+}

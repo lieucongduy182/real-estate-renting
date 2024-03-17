@@ -1,0 +1,24 @@
+.App {
+	background-color: #0f0f0f;
+	color: #fff;
+}
+
+input,
+select,
+textarea {
+	color: #fff;
+}
+
+textarea:focus,
+input:focus {
+	color: #fff;
+}
+.ant-upload-span {
+	color: #fff;
+}
+.ant-upload-span > span > button > span > svg {
+	color: #fff;
+}
+.ant-select-selection-item {
+	color: #fff;
+}

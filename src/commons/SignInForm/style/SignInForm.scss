@@ -1,0 +1,68 @@
+@import "../../../sass/index.scss";
+
+.form {
+	text-align: left;
+	overflow: auto;
+
+	&__label {
+		font-weight: bold;
+		padding-bottom: 0.5rem;
+		padding-left: 0.5rem;
+		color: $color-golden;
+	}
+
+	&__input {
+		border: 0;
+		width: 100%;
+		padding: 1.5rem 2rem;
+		background-color: #292929 !important;
+		border-radius: 10px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+		margin-bottom: 1rem;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__button {
+		border: 0;
+		width: 100%;
+		padding: 1.5rem 2rem;
+		border-radius: 10px;
+
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 1.5rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+
+		&:focus {
+			outline: none;
+		}
+		&.primary {
+			background-image: linear-gradient(to right, #0093e9, #194b91);
+			&:hover {
+				cursor: pointer;
+				background-image: linear-gradient(to right, #2ca7ee, #3e6bac);
+			}
+
+			&.disabled {
+				background-image: linear-gradient(to right, #525252, #525252);
+				cursor: not-allowed;
+			}
+		}
+
+		&.google {
+			background-image: linear-gradient(to right, #ee8554, #c43a30);
+			&:hover {
+				cursor: pointer;
+				background-image: linear-gradient(to right, #f19d77, #cc5b53);
+			}
+		}
+	}
+}
+
+.ant-form-item {
+	margin-bottom: 0;
+}

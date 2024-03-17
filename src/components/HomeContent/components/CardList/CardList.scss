@@ -1,0 +1,52 @@
+@import "../../../../sass/index.scss";
+
+.card-list {
+	position: relative;
+	background-color: #181818;
+	padding: 2rem 1.5rem;
+	border-radius: 20px;
+	width: 90%;
+	margin: 0 auto;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+	.empty {
+		// visibility: visible;
+		// height: fit-content;
+		&.show {
+			visibility: hidden;
+			height: 0;
+		}
+	}
+	.item-in-list {
+		padding: 0 1rem 2rem;
+		transition: all 1s;
+
+		&:hover {
+			padding: 0 0.2rem 0.5rem;
+		}
+	}
+	.pagination {
+		text-align: center;
+		margin: 2rem 0;
+		visibility: hidden;
+		height: 0;
+		&.show {
+			visibility: visible;
+			height: fit-content;
+		}
+	}
+	.map-button-small-view {
+		border-radius: 5px;
+		position: fixed;
+		bottom: 15px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: none;
+	}
+}
+
+@media (max-width: 1199px) {
+	.map-button-small-view {
+		display: block !important;
+	}
+}

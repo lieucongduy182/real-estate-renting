@@ -1,0 +1,40 @@
+@import "../../../../sass/index.scss";
+
+.visible-map {
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+	width: 90%;
+	margin: 20px auto 0;
+	padding: 2rem;
+
+	.visible-map-button {
+		border-radius: 5px;
+		color: $color-black;
+		border-color: $color-golden;
+		font-weight: bold;
+		margin-bottom: 2rem;
+
+		&:hover {
+			background-color: $color-golden;
+			color: $color-black;
+		}
+	}
+	.map-button-small-view {
+		border-radius: 5px;
+		position: fixed;
+		bottom: 15px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: none;
+	}
+}
+
+@media (max-width: 1199px) {
+	.map-button-small-view {
+		display: block !important;
+	}
+	.visible-map {
+		display: none !important;
+	}
+}

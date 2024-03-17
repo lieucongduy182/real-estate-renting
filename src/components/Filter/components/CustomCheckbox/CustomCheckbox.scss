@@ -1,0 +1,68 @@
+@import "../../../../sass/index.scss";
+
+.custom-checkbox {
+    margin-bottom: 2rem;
+    .label {
+        font-weight: bold;
+        color: $color-primary;
+        font-size: $font-size-heading6;
+    }
+
+    // custom antd
+    .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        // flex-direction: column;
+        label {
+            margin-bottom: 1rem;
+        }
+        .ant-checkbox-group-item {
+            flex: 0 0 20%;
+            margin: 0;
+            transition: all .2s;
+            margin-bottom: 1rem;
+
+        }
+    }
+
+    .more {
+        cursor: pointer;
+        color: $color-gray;
+        margin-top: .5rem;
+        &:hover {
+            color: $color-primary;
+        }
+        .icon {
+            margin-right: 0.2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .custom-checkbox {
+        .checkbox-group {
+            .ant-checkbox-group-item {
+                flex: 0 0 33%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .custom-checkbox {
+        .checkbox-group {
+            .ant-checkbox-group-item {
+                flex: 0 0 50%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 474px) {
+    .custom-checkbox {
+        .checkbox-group {
+            flex-direction: column;
+        }
+    }
+}
+

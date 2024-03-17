@@ -1,0 +1,124 @@
+@import "../../sass/index.scss";
+
+.info-detail {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	.img-wrap {
+		margin-bottom: 20px;
+		border-radius: 20px;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+			rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+		img {
+			border-radius: 3px;
+			height: 40rem;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		padding: 2rem;
+		background-color: #181818;
+		border-radius: 20px;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+			rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	}
+
+	.title {
+		font-size: $font-size-heading6;
+		display: -webkit-box;
+		word-wrap: break-word;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow-y: hidden;
+		text-overflow: ellipsis;
+		white-space: pre-line;
+		&:hover {
+			color: $color-primary;
+		}
+	}
+	.date {
+		font-size: 1rem;
+		color: $color-gray;
+		background-color: #292929;
+		border-radius: 10px 10px 0 0;
+		padding: 1rem;
+	}
+	.group {
+		background-color: #292929;
+		border-radius: 0 0 10px 10px;
+		padding: 1rem;
+		margin-bottom: 2rem;
+
+		& > div > button {
+			background-color: $color-golden;
+			color: $color-black;
+			border-radius: 10px;
+			border: none;
+		}
+	}
+
+	.info-detail-with-icon {
+		display: flex;
+		align-items: center;
+		margin-top: 1rem;
+	}
+	.info-detail-icon-item {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+		.icon {
+			margin-right: 0.5rem;
+		}
+	}
+	.description {
+		margin: 1.5rem 0;
+		display: -webkit-box;
+		word-wrap: break-word;
+		// -webkit-line-clamp: 4;
+		// -webkit-box-orient: vertical;
+		// overflow-y: hidden;
+		// text-overflow: ellipsis;
+		white-space: pre-line;
+
+		background-color: #292929;
+		border-radius: 10px;
+		padding: 2rem;
+		margin-bottom: 2rem;
+	}
+	.info-detail-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #292929;
+		border-radius: 10px;
+		padding: 2rem;
+		.author {
+			span {
+				color: #8d949b;
+			}
+			.author-info {
+				display: flex;
+				.author-avatar {
+				}
+				.author-name {
+					font-weight: bold;
+					margin-bottom: 0;
+					margin-left: 5px;
+					line-height: 32px;
+				}
+			}
+		}
+	}
+}
+
+.ant-modal-close-x {
+	line-height: 28px !important;
+	text-align: end !important;
+	margin-right: 5px;
+	color: $color-primary;
+	font-size: 20px;
+	margin-top: 5px;
+}

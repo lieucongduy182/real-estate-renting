@@ -1,0 +1,18 @@
+@import '../../sass/index.scss';
+
+.custom-input {
+    border: 1px solid #d9d9d9;
+    // border: 1px solid $color-primary;
+    padding: 0 11px;
+    font-size: 1.6rem;
+    height: $height-input;
+    border-radius: $border-radius;
+    transition:  all .2s;
+    &::placeholder{
+        color: #d9d9d9;
+    }
+    &:focus {
+        outline: none;
+        background-color: rgba($color-gray, .05);
+    }
+}

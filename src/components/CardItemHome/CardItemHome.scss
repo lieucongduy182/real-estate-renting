@@ -1,0 +1,110 @@
+@import "../../sass/index.scss";
+
+.card-item-home {
+	background-color: #292929;
+	padding: 1.5rem;
+	border-radius: 20px;
+	//padding: 2rem;
+	border: 1px solid rgba(0, 0, 0, 0.042);
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06);
+	transition: all 0.2s;
+
+	&:hover {
+		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+	}
+
+	&:hover .img-wrap img {
+		outline: 2px solid $color-white;
+		outline-offset: -2rem;
+	}
+
+	&.active {
+		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+		.img-wrap img {
+			outline: 2px solid $color-white;
+			outline-offset: -1rem;
+		}
+	}
+
+	.img-wrap {
+		img {
+			border-radius: 10px 10px 0 0;
+			height: 20rem;
+			width: 100%;
+			object-fit: cover;
+			transition: all 0.2s;
+		}
+	}
+
+	.cart-content {
+		padding: 1rem;
+	}
+
+	.title {
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: $font-size-heading6;
+		display: -webkit-box;
+		word-wrap: break-word;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow-y: hidden;
+		text-overflow: ellipsis;
+		white-space: pre-line;
+		&:hover {
+			color: $color-primary;
+		}
+		& > a {
+			color: $color-white;
+		}
+	}
+	.date {
+		font-size: 1rem;
+		color: $color-gray;
+	}
+	.info-with-icon {
+		display: flex;
+		align-items: center;
+		margin-top: 1rem;
+	}
+	.info-icon-item {
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+		border-radius: 30px;
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+		.icon {
+			margin-right: 0.5rem;
+		}
+		&.home {
+			color: $color-white;
+			font-weight: 600;
+		}
+
+		&.price {
+			color: $color-white;
+			font-weight: 600;
+		}
+
+		&.location {
+			background-color: $color-golden;
+			color: $color-black;
+			font-weight: 600;
+		}
+	}
+	.description {
+		font-size: 1.4rem;
+		margin: 1rem 0;
+		display: -webkit-box;
+		word-wrap: break-word;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow-y: hidden;
+		text-overflow: ellipsis;
+		white-space: pre-line;
+		color: $color-gray;
+	}
+}

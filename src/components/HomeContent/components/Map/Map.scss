@@ -1,0 +1,42 @@
+@import "../../../../sass/index.scss";
+
+.map-wrap {
+    transition: all 0.2s;
+    &.stick-top {
+        position: fixed;
+        margin-top: 0;
+        position: fixed;
+        top: 0;
+    }
+    &.stick-bottom {
+        position: fixed;
+        margin-top: 0;
+        position: fixed;
+        bottom: 3.5rem;
+    }
+}
+
+.fade-enter .map-wrap {
+    opacity: 0;
+    transform: translateX(1000px);
+}
+.fade-enter-active .map-wrap {
+    opacity: 1;
+    transform: translateX(500px);
+}
+.fade-exit .map-wrap {
+    opacity: 1;
+    transform: translateX(1000px);
+}
+.fade-exit-active .map-wrap {
+    opacity: 0;
+    transform: translateX(500px);
+}
+
+.fade-enter-active .map-wrap {
+    transition: opacity 200ms, transform 300ms;
+}
+
+.fade-exit-active .map-wrap {
+    transition: opacity 200ms, transform 300ms;
+}

@@ -1,0 +1,31 @@
+@import "../../sass/index.scss";
+
+.custom-pagination {
+	// custom antd
+
+	.ant-pagination-prev,
+	.ant-pagination-next {
+		border: none;
+		button {
+			border: none;
+			background-color: $color-gray !important;
+		}
+	}
+	.ant-pagination-item {
+		border-radius: 3px;
+		background-color: #292929;
+		color: $color-white !important;
+		border: none;
+		& > a {
+			color: $color-white !important;
+		}
+
+		&:hover {
+			background-color: rgba($color: $color-golden, $alpha: 0.5);
+		}
+
+		&.ant-pagination-item-active {
+			background-color: rgba($color: $color-golden, $alpha: 1);
+		}
+	}
+}

@@ -1,0 +1,48 @@
+@import "../../../sass/index.scss";
+
+.profile {
+	padding-top: 7rem;
+	background-color: $color-black !important;
+	overflow-x: auto;
+	width: auto;
+
+	&__sider {
+		background-color: $color-black !important;
+		min-height: calc(100vh - 7rem);
+		padding-bottom: 2rem;
+
+		& > div {
+			& > ul {
+				height: 100%;
+				& > li {
+					&.ant-menu-item-selected {
+						background-color: $color-golden !important;
+						border-radius: 20px;
+						color: $color-black;
+					}
+				}
+			}
+		}
+	}
+
+	&__menu {
+		background-color: #292929 !important;
+		font-weight: bold;
+		font-size: 1.5rem;
+		padding: 1rem;
+		width: 260px !important;
+		margin: auto;
+		border-radius: 20px;
+	}
+
+	&__content {
+		background-color: #181818;
+		padding: 3rem;
+		border-radius: 20px;
+	}
+
+	&__layout {
+		background-color: $color-black !important;
+		padding-bottom: 2rem;
+	}
+}

@@ -1,0 +1,33 @@
+@import '../../sass/index.scss';
+
+
+.custom-select {
+    .ant-select-selector {
+        height: $height-input !important;
+        display: flex;
+        align-items: center;
+        border-radius: $border-radius !important;
+        // border-color: $color-primary !important;
+        transition:  all .2s;
+        &:focus {
+            outline: none;
+            background-color: rgba($color-gray, .05);
+        }
+        .ant-select-selection-item {
+            color: #000;
+        }
+    }
+    .ant-select-selection-placeholder {
+        letter-spacing: 1px;
+        opacity: .95;
+        color: #bfbfbf;
+    }
+}
+
+@media only screen and (max-width: 573px) {
+.custom-select {
+    .ant-select-selection-placeholder {
+        letter-spacing: 0px;
+    }
+}
+}

@@ -1,0 +1,225 @@
+@import "../../sass/index.scss";
+
+.filter {
+	margin: 5rem 4rem 0;
+	position: relative;
+
+	.filter-option {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		.filter-select-group {
+			padding-left: 2.5rem;
+			display: flex;
+			align-items: center;
+		}
+	}
+	.filter-item {
+		.title {
+			margin-bottom: 0.5rem;
+			color: $color-golden;
+			font-size: $font-size-heading6;
+			font-weight: bold;
+		}
+		&:not(:last-child) {
+			padding-right: 2.5rem;
+			position: relative;
+			border-right: 2px solid rgba($color-gray, 0.1);
+		}
+		&:not(:first-child) {
+			padding-left: 2.5rem;
+		}
+		.range {
+			display: flex;
+			input {
+				&:not(:last-child) {
+					margin-right: 0.5rem;
+				}
+			}
+		}
+		.price-range {
+			min-width: 30rem;
+		}
+	}
+	.btn-filter {
+		text-align: right;
+		align-self: flex-end;
+	}
+	.more-option-filter {
+		// display: none;
+		height: 0;
+		overflow: hidden;
+		transition: all 0.2s;
+		transform: translateX(100%);
+		&.show {
+			height: fit-content;
+			display: block;
+			transform: translateX(0);
+		}
+	}
+	.basic-filter-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 1rem;
+		padding-bottom: 2rem;
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+			rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+			rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+		background-color: rgba($color: $color-black, $alpha: 0.7);
+
+		width: 100%;
+		margin: auto;
+		position: relative;
+
+		&.native {
+			animation: toSmall 1s;
+		}
+	}
+
+	.btn-group {
+		z-index: 1;
+		position: relative;
+		display: flex;
+		// justify-content: flex-end;
+		margin-bottom: 2rem;
+		justify-content: center;
+		margin-top: -2rem;
+		.btn-more {
+			margin-right: 1.5rem;
+		}
+
+		&.top {
+			margin-bottom: -1rem;
+			margin-top: 2rem;
+
+			& > button {
+				border-radius: 20px;
+			}
+		}
+	}
+	.checked-option {
+		margin-bottom: 3rem;
+		min-height: 3rem;
+	}
+
+	transition: 1s;
+	top: 0;
+	&.native {
+		top: -100px;
+	}
+}
+
+.ant-slider-track {
+	background-color: $color-golden;
+}
+
+.ant-slider:hover .ant-slider-track {
+	background-color: rgba($color: $color-golden, $alpha: 1);
+}
+
+@media only screen and (max-width: 1200px) {
+	.filter {
+		margin: 5rem 2rem 5rem;
+		.basic-filter-content {
+			flex-direction: column-reverse;
+			border-radius: 1rem;
+			width: 90%;
+
+			.filter-select-group {
+				.filter-item {
+					margin: 0 0.5rem;
+				}
+			}
+		}
+		.filter-option {
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 3rem 1rem;
+		}
+		.filter-item {
+			flex: 0 0 30%;
+			// margin-top: 1rem;
+			margin: auto;
+			padding: 0 !important;
+			&:not(:last-child) {
+				padding-right: auto;
+				border: none;
+			}
+			&.filter-price {
+				text-align: center;
+				flex: 0 0 100%;
+				margin-bottom: 2rem;
+				.price-range {
+					width: 50rem;
+					text-align: center;
+					margin: auto;
+				}
+			}
+			.range {
+				width: 50%;
+			}
+		}
+		.btn-filter {
+			text-align: start;
+		}
+	}
+}
+
+@media only screen and (max-width: 711px) {
+	.filter {
+		margin: 5rem 2rem 5rem;
+		.filter-item {
+			.ant-select {
+				width: fit-content !important;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	.filter {
+		margin: 5rem 1rem 5rem;
+	}
+}
+@media only screen and (max-width: 520px) {
+	.filter {
+		.basic-filter-content {
+			.filter-select-group {
+				width: 100%;
+				flex-direction: column;
+				.filter-item {
+					margin-top: 1rem;
+				}
+			}
+		}
+		.filter-option {
+			flex-direction: column;
+			margin: 0;
+		}
+		.filter-item {
+			flex: 0 0 100%;
+			.ant-select {
+				width: fit-content !important;
+			}
+			&.filter-price {
+				.price-range {
+					width: 90%;
+				}
+			}
+		}
+	}
+	.btn-group {
+		justify-content: center !important;
+	}
+}
+
+@keyframes toSmall {
+	from {
+	}
+	to {
+		width: 30%;
+	}
+}

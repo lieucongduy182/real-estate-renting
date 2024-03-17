@@ -1,0 +1,32 @@
+@import "../../sass/index.scss";
+
+.modal-home-detail {
+	width: 70% !important;
+
+	.modal-home-detail-content {
+		padding: 3rem;
+		background-color: $color-black;
+		color: $color-white;
+	}
+	.ant-modal-close-x {
+		color: rgba($color-white, 0.8);
+	}
+}
+
+.ant-modal-content {
+	border-radius: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+	.modal-home-detail {
+		width: 80% !important;
+		border-radius: 10px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.modal-home-detail {
+		width: 90% !important;
+		border-radius: 10px;
+	}
+}

@@ -1,0 +1,27 @@
+@import "../../sass/index.scss";
+
+.home {
+	//height: 100vh;
+	background-color: $color-black;
+}
+
+.ant-drawer-content {
+	background-color: transparent;
+}
+
+.affix,
+.ant-affix {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.modal__chat {
+	width: 70% !important;
+}
+
+@media only screen and (max-width: 530px) {
+	.modal__chat {
+		width: 90% !important;
+	}
+}

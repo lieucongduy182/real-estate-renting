@@ -1,0 +1,51 @@
+@import "../../../sass/index.scss";
+
+.commentInput {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	background-color: #292929;
+	border: 1px #292929 solid;
+	border-radius: 20px;
+	padding: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+
+	&__form {
+		width: 100%;
+	}
+
+	&__input {
+		border: 0;
+		width: 100%;
+		margin: 0 2rem;
+		background-color: #292929;
+		color: $color-white;
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__button {
+		border: 0;
+		width: 100%;
+		padding: 0.5rem 2rem;
+		border-radius: 17px;
+
+		color: $color-black;
+		font-weight: bold;
+		font-size: 1.5rem;
+
+		&:focus {
+			outline: none;
+		}
+		&.primary {
+			background-color: $color-golden;
+		}
+		&.upload {
+			width: auto;
+		}
+	}
+}

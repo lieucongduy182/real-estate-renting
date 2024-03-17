@@ -1,0 +1,41 @@
+@import "../../../sass/index.scss";
+
+.modalBox {
+	padding: 2rem;
+	text-align: center;
+
+	.ant-modal-content {
+		padding: 2rem;
+		border-radius: 20px;
+		background-color: #181818 !important;
+		color: $color-white;
+	}
+
+	&__title {
+		color: $color-golden;
+		font-size: 2.5rem;
+		font-weight: bold;
+		padding-bottom: 1rem;
+		text-transform: uppercase;
+	}
+}
+
+.buttonLogin {
+	background-color: transparent;
+	color: $color-black;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+	border: $color-white solid 1px;
+	background-color: $color-golden;
+	border-radius: 30px !important;
+
+	&:hover {
+		background-color: rgba($color: $color-golden, $alpha: 0.7);
+	}
+
+	&.native {
+		border: $color-golden solid 1px;
+		color: $color-golden;
+		background-color: transparent;
+	}
+}

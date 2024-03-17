@@ -1,0 +1,42 @@
+@import "../../sass/index.scss";
+
+.globalChat {
+	position: relative;
+	min-height: 80vh;
+	width: 100%;
+	padding: 2rem;
+	background-color: $color-black;
+	border-radius: 20px;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+
+	&__title {
+		text-align: center;
+		font-size: 3rem;
+		font-weight: bold;
+		margin-bottom: 2rem;
+		color: $color-golden;
+		height: 10%;
+	}
+
+	&__content {
+		overflow-y: scroll;
+		padding: 3rem;
+		background-color: #181818;
+		height: 60vh;
+		border-radius: 20px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		margin-bottom: 8rem;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__form {
+		width: calc(100% - 4rem);
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+}

@@ -1,0 +1,27 @@
+@import "../../../../sass/index.scss";
+
+.custom-btn-filter {
+	display: flex;
+	border-radius: $border-radius !important;
+	min-width: 14rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.8rem;
+
+	.icon {
+		margin-right: 0.8rem;
+		font-size: 2.3rem;
+	}
+	&.ant-btn-primary {
+		display: flex;
+		// justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(to right, $color-golden, #dfaf2b);
+
+		border-radius: 5px;
+		border: none;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+}

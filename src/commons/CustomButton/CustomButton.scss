@@ -1,0 +1,38 @@
+@import "../../sass/index.scss";
+
+.custom-btn {
+	// custom antd
+	.ant-btn {
+		border-radius: 5px;
+		transition: all 0.2s;
+		height: 4rem;
+		font-size: 1.6rem;
+		// border: none;
+	}
+	.ant-btn-primary {
+		background-image: linear-gradient(
+			to right,
+			$color-primary,
+			$color-primary-2
+		);
+		// border-color: $color-primary-2;
+	}
+	.secondary {
+		background-image: linear-gradient(
+			to right,
+			rgba($color-warning, 0.7),
+			$color-warning
+		);
+		color: $color-primary-2;
+		border-color: $color-warning;
+		width: fit-content;
+		&:hover {
+			color: $color-white;
+			background-image: linear-gradient(
+				to right,
+				$color-warning,
+				rgba($color-warning, 0.7)
+			);
+		}
+	}
+}

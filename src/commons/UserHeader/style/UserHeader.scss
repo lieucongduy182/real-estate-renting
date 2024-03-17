@@ -1,0 +1,27 @@
+@import "../../../sass/index.scss";
+
+.headerUser {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: 1s;
+	padding: 0.5rem;
+	border-radius: 20px;
+	cursor: pointer;
+
+	&__name {
+		color: transparent;
+		font-weight: bold;
+		font-size: 1.25rem;
+		padding: 0.5rem;
+		//display: none;
+	}
+
+	&:hover {
+		background-color: $color-golden;
+
+		.headerUser__name {
+			color: black;
+		}
+	}
+}
