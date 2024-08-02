@@ -85,9 +85,9 @@ const CommentDetail = ({ data, user, firestore, firebase }) => {
 						<div>Sign In</div>
 						<SignInForm auth={firebase.auth()} firebase={firebase} />
 						<span>
-							Already have an account ?{" "}
+							Bạn chưa có tài khoản ?{" "}
 							<Button type="link" onClick={handleSwitchAuth}>
-								Register
+								Đăng ký
 							</Button>
 						</span>
 					</>
@@ -96,7 +96,7 @@ const CommentDetail = ({ data, user, firestore, firebase }) => {
 						<div>Sign Up</div>
 						<SignUpForm auth={firebase.auth()} firebase={firebase} />
 						<span>
-							Already have an account ?{" "}
+							Bạn chưa có tài khoản ?{" "}
 							<Button type="link" onClick={handleSwitchAuth}>
 								Login
 							</Button>

@@ -1,0 +1,38 @@
+@import '../../../../sass/index.scss';
+
+.speech_modal {
+  width: 90%;
+  margin: 2rem auto;
+  background-color: $color-black-2;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  span.ant-modal-close-x {
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  div.ant-modal-body {
+    color: $color-white;
+    background: $color-black-2;
+    padding: 16px 24px;
+  }
+
+  div.ant-modal-header {
+    background: $color-black-2;
+    border: none;
+    border-radius: 20px 20px 0 0;
+
+    .ant-modal-title {
+      color: $color-golden;
+    }
+  }
+
+  div.ant-modal-footer {
+    text-align: center;
+    padding: 0;
+    background-color: $color-black-2;
+    border: none;
+  }
+}

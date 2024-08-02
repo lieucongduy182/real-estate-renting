@@ -95,7 +95,7 @@ function ChangePassword({ user, firebase }) {
 									}
 									return Promise.reject(
 										new Error(
-											"The two passwords that you entered do not match!"
+											"Mật khẩu không trùng khớp"
 										)
 									);
 								},

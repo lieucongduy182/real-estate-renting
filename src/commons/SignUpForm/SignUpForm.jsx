@@ -25,9 +25,9 @@ function SignUpForm({ auth, firebase }) {
 					} else {
 						auth.signOut();
 						return notification.error({
-							message: "Failed to login",
+							message: "Đăng nhập thất bại",
 							description:
-								"You are banned, please contact to your administrator",
+								"Tài khoản bị đình chỉ, xin vui lòng liên hệ admin.",
 						});
 					}
 				} else {
@@ -69,9 +69,9 @@ function SignUpForm({ auth, firebase }) {
 					} else {
 						auth.signOut();
 						return notification.error({
-							message: "Failed to login",
+							message: "Đăng nhập thất bại",
 							description:
-								"You are banned, please contact to your administrator",
+								"Tài khoản bị đình chỉ, xin vui lòng liên hệ admin.",
 						});
 					}
 				} else {
@@ -91,7 +91,7 @@ function SignUpForm({ auth, firebase }) {
 				let errorMessage = error.message;
 
 				return notification.error({
-					message: "Register thất bại",
+					message: "Đăng ký thất bại",
 					// description: errorMessage,
 				});
 			});
@@ -112,27 +112,27 @@ function SignUpForm({ auth, firebase }) {
 						{
 							required: true,
 							type: "email",
-							message: "Please input your email!",
+							message: "Xin vui lòng nhập email",
 						},
 					]}
 				>
 					<input className="form__input" />
 				</Form.Item>
 
-				<div className="form__label">Password</div>
+				<div className="form__label">Mật khẩu</div>
 				<Form.Item
 					name="password"
 					rules={[
 						{
 							required: true,
-							message: "Please input your password!",
+							message: "Xin vui lòng nhập mật khẩu",
 						},
 					]}
 				>
 					<input type="password" className="form__input" />
 				</Form.Item>
 
-				<div className="form__label">Re Password</div>
+				<div className="form__label">Nhập lại mật khảu</div>
 				<Form.Item
 					name="confirm"
 					dependencies={["password"]}
@@ -140,7 +140,7 @@ function SignUpForm({ auth, firebase }) {
 					rules={[
 						{
 							required: true,
-							message: "Please confirm your password!",
+							message: "Xin vui lòng xác nhận mất khẩu",
 						},
 						({ getFieldValue }) => ({
 							validator(_, value) {
@@ -148,7 +148,7 @@ function SignUpForm({ auth, firebase }) {
 									return Promise.resolve();
 								}
 								return Promise.reject(
-									new Error("The two passwords that you entered do not match!")
+									new Error("Mật khẩu không trùng khớp")
 								);
 							},
 						}),
@@ -159,13 +159,13 @@ function SignUpForm({ auth, firebase }) {
 
 				<Form.Item>
 					<button className="form__button primary" htmlType="submit">
-						Register
+						Đăng ký
 					</button>
 				</Form.Item>
 			</Form>
 
 			<button onClick={SignInWithGoogle} className="form__button google">
-				Login with Google
+				Đăng nhập với Google
 			</button>
 		</div>
 	);

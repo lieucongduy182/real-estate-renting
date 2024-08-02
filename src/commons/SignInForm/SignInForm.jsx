@@ -19,15 +19,15 @@ function FormSignIn({ auth, firebase }) {
 				if (index > -1) {
 					if (listUser[index].status !== "block") {
 						return notification.success({
-							message: "Login Successfully",
+							message: "Đăng nhập thành công",
 							description: "",
 						});
 					} else {
 						auth.signOut();
 						return notification.error({
-							message: "Failed to login",
+							message: "Đăng nhập thất bại",
 							description:
-								"You are banned, please contact your administrator",
+								"Tài khoản bị đình chỉ, xin vui lòng liên hệ admin.",
 						});
 					}
 				} else {
@@ -37,7 +37,7 @@ function FormSignIn({ auth, firebase }) {
 						status: "live",
 					});
 					return notification.success({
-						message: "Login Successfully",
+						message: "Đăng nhập thành công",
 						description: "",
 					});
 				}
@@ -63,15 +63,15 @@ function FormSignIn({ auth, firebase }) {
 				if (index > -1) {
 					if (listUser[index].status !== "block") {
 						return notification.success({
-							message: "Login Successfully",
+							message: "Đăng nhập thành công",
 							description: "",
 						});
 					} else {
 						auth.signOut();
 						return notification.error({
-							message: "Failed to login",
+							message: "Đăng nhập thất bại",
 							description:
-								"You are banned, please contact to your administrator",
+								"Tài khoản bị đình chỉ, xin vui lòng liên hệ admin.",
 						});
 					}
 				} else {
@@ -81,15 +81,15 @@ function FormSignIn({ auth, firebase }) {
 						status: "live",
 					});
 					return notification.success({
-						message: "Login Successfully",
+						message: "Đăng nhập thành công",
 					});
 				}
 			})
 			.catch((error) => {
 
 				return notification.error({
-					message: "Failed to login",
-					description: "Email or Password is incorrect!",
+					message: "Đăng nhập thất bại",
+					description: "Email hoặc mật khẩu không đúng",
 				});
 			});
 	};
@@ -115,20 +115,20 @@ function FormSignIn({ auth, firebase }) {
 					rules={[
 						{
 							type: "email",
-							message: "Please input your email!",
+							message: "Xin vui lòng nhập email",
 						},
 					]}
 				>
 					<input className="form__input" />
 				</Form.Item>
 
-				<div className="form__label">Password</div>
+				<div className="form__label">Mật khẩu</div>
 				<Form.Item
 					name="password"
 					rules={[
 						{
 							required: true,
-							message: "Please input your password!",
+							message: "Xin vui lòng nhập mật khẩu",
 						},
 					]}
 				>
@@ -137,13 +137,13 @@ function FormSignIn({ auth, firebase }) {
 
 				<Form.Item>
 					<button htmlType="submit" className="form__button  primary">
-						Login
+						Đăng nhập
 					</button>
 				</Form.Item>
 			</Form>
 
 			<button onClick={SignInWithGoogle} className="form__button google">
-				Login with Google
+				Đăng nhập với Google
 			</button>
 		</div>
 	);

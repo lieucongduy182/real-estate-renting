@@ -32,7 +32,7 @@ function Auth({ auth, firebase, header }) {
 				type="text"
 				className={`buttonLogin ${header ? "native" : ""}`}
 			>
-				Login
+				Đăng nhập
 			</Button>
 
 			<Modal
@@ -44,31 +44,31 @@ function Auth({ auth, firebase, header }) {
 			>
 				{status ? (
 					<>
-						<div className="modalBox__title">Login</div>
+						<div className="modalBox__title">Đăng nhập</div>
 						<SignInForm auth={auth} firebase={firebase} />
 						<span>
-							Already have an account ?
+							Bạn chưa có tài khoản ?
 							<Button
 								className="modalBox__button"
 								type="link"
 								onClick={handleSwitchAuth}
 							>
-								Register
+								Đăng ký
 							</Button>
 						</span>
 					</>
 				) : (
 					<>
-						<div className="modalBox__title">Register</div>
+						<div className="modalBox__title">Đăng ký</div>
 						<SignUpForm auth={auth} firebase={firebase} />
 						<span>
-							Already have an account ?
+							Bạn chưa có tài khoản
 							<Button
 								className="modalBox__button"
 								type="link"
 								onClick={handleSwitchAuth}
 							>
-								Login
+								Đăng nhập
 							</Button>
 						</span>
 					</>
